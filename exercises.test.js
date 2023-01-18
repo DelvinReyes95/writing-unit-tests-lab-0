@@ -33,7 +33,9 @@ test('Question 3: swap', () => {
 test('Question 4: wordSizes', () => {
   expect(exercises.wordSizes('Four score and seven.')).toEqual({ "3": 1, "4": 1, "5": 1, "6": 1 });
   expect(exercises.wordSizes('Hey diddle diddle, the cat and the fiddle!')).toEqual({  "3": 5, "6": 1, "7": 2 });
-  expect(exercises.wordSizes("What's up doc?")).toEqual({ "2": 1, "4": 1, "6": 1  });
+  expect(exercises.wordSizes("What's up doc?")).toEqual({ "2": 1, "4": 1, "6": 1});
+  expect(exercises.wordSizes('')).toEqual({});
+  
 })
 
 test('Question 5: union', () => {

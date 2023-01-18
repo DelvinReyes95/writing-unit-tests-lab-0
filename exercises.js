@@ -39,20 +39,28 @@ const swap = (reverse) => {
 
 // Question 4
 
-const wordSizes = (str) => {
-  let wordCount = {};
-  let words = str.split(" ");
-  
-  for (let i = 0; i < words.length; i++) {
-    let length = words[i].length;
-    if (wordCount[length]) {
-      wordCount[length]++;
-    } else {
-      wordCount[length] = 1;
-    }
+const wordSizes = (word) => {
+  if(!word){
+    return {};
   }
+  return word.split(' ').reduce((words,num)=>{
+    words[num.length] = (words[num.length] || 0) + 1;
+    return words;
+  },{});
+
+  // let wordCount = {};
+  // let words = str.split(" ");
   
-  return wordCount;
+  // for (let i = 0; i < words.length; i++) {
+  //   let length = words[i].length;
+  //   if (wordCount[length]) {
+  //     wordCount[length]++;
+  //   } else {
+  //     wordCount[length] = 1;
+  //   }
+  // }
+  
+  // return wordCount;
   
 };
 
